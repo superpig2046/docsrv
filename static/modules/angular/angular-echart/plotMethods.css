@@ -1,0 +1,23 @@
+.disabledWell{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 4px;
+    z-index:1001;
+    -moz-opacity: 0.5;
+    opacity:.50;
+    filter: alpha(opacity=50);
+
+}
+
+.disabledWellContent{
+    font-size:32px;
+    font-weight: bold;
+    color:#FFFFFF;
+    text-align: center;
+    line-height: 600px;
+}

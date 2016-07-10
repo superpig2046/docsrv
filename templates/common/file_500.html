@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部错误发生</title>
+    <style type="text/css">
+        html{
+            font-family: Helvetica,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Arial,sans-serif !important;
+        }
+        body {
+            padding: 10px 20px;
+            width: 1200px;
+            background-color: #EFF3F8;
+            color: #697882;
+            font-size: 16px;
+            mso-line-height-rule: exactly;
+            line-height: 1.428;
+        }
+        p.err-code{
+            color: #EF4836;
+            font-size: 84px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p.err-msg{
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="err-code">500</p>
+    <p class="err-msg">服务器内部错误发生! <br>{{ err }}</p>
+</body>
+</html>
