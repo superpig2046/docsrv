@@ -6,6 +6,7 @@ import traceback
 from datetime import datetime, timedelta
 import requests
 import inspect
+from werkzeug import secure_filename
 
 __author__ = 'hany'
 
@@ -189,3 +190,18 @@ def res_json(code, data, message, success, **kwargs):
     if str(code) in ["200", "401", "403"]:
         res.status_code = code
     return res
+
+
+def my_secure_filename(file_name, chn_mode='chn'):
+    if chn_mode == 'ignore':
+        return secure_filename(repr(file_name))
+    elif chn_mode == 'chn':
+        if file_name.count('/') > 0:
+            file_name = file_name.split('/')[-1]
+
+        if file_name.count(' ') > 0:
+            file_name = file_name.replace(' ', '_')
+
+        return file_name
+    else:
+        return secure_filename(file_name)

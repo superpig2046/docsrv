@@ -1,0 +1,24 @@
+2016-07-10 14:44:07,597 WARNING 35526 /wls/application/docsrv/docsrv/apis/attachment.py 118 - attachment.get.id.json execution fail error:Traceback (most recent call last):
+  File "/wls/application/docsrv/docsrv/apis/attachment.py", line 100, in attachment_fetch_upload_by_id
+    fileobj = storage.get(ObjectId(_id))
+  File "/Users/yonghan/.pyenv/versions/docsrv/lib/python2.7/site-packages/bson/objectid.py", line 110, in __init__
+    self.__validate(oid)
+  File "/Users/yonghan/.pyenv/versions/docsrv/lib/python2.7/site-packages/bson/objectid.py", line 206, in __validate
+    _raise_invalid_id(oid)
+  File "/Users/yonghan/.pyenv/versions/docsrv/lib/python2.7/site-packages/bson/objectid.py", line 52, in _raise_invalid_id
+    " or a 24-character hex string" % oid)
+InvalidId: u'5781ea36a541dd88b5051ec6e' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+
+u'5781ea36a541dd88b5051ec6e' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2016-07-10 14:44:36,552 WARNING 35571 /wls/application/docsrv/docsrv/apis/attachment.py 118 - attachment.get.id.json execution fail error:Traceback (most recent call last):
+  File "/wls/application/docsrv/docsrv/apis/attachment.py", line 100, in attachment_fetch_upload_by_id
+    fileobj = storage.get(ObjectId(_id))
+  File "/Users/yonghan/.pyenv/versions/docsrv/lib/python2.7/site-packages/bson/objectid.py", line 110, in __init__
+    self.__validate(oid)
+  File "/Users/yonghan/.pyenv/versions/docsrv/lib/python2.7/site-packages/bson/objectid.py", line 206, in __validate
+    _raise_invalid_id(oid)
+  File "/Users/yonghan/.pyenv/versions/docsrv/lib/python2.7/site-packages/bson/objectid.py", line 52, in _raise_invalid_id
+    " or a 24-character hex string" % oid)
+InvalidId: u'5781ea36a541dd88b5051ec6e' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+
+u'5781ea36a541dd88b5051ec6e' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string

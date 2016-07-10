@@ -1,7 +1,6 @@
 # coding=utf-8
 
 from ..ext import mongo
-from werkzeug import secure_filename
 from random import randint
 import csv
 import os.path
@@ -11,6 +10,8 @@ from openpyxl.styles import Font, PatternFill, Color
 from openpyxl.styles.colors import WHITE
 from datetime import datetime, timedelta
 import urllib
+from ..utils import my_secure_filename
+
 
 __author__ = 'hany'
 
@@ -18,12 +19,12 @@ __author__ = 'hany'
 class TransformFile(object):
     def __init__(self, file_object):
         self.file = file_object
-        self.file_name = secure_filename(repr(file_object.filename))
-        print '>????', self.file_name, '<<<', repr(file_object.filename),
+        self.file_name = my_secure_filename(file_object.filename)
+        # print '>????', self.file_name, '<<<', repr(file_object.filename),
         self.content_type = file_object.content_type
         self._allowed = ['text/csv']
         self.ext = os.path.splitext(self.file_name)[1]
-        print '<<<<', self.ext, self.file_name
+        # print '<<<<', self.ext, self.file_name
         self._map = {'.csv': self._transform_csv, '.xls': self._transform_xls,
                      '.xlsx': self._transform_xls}
         self.table_grid = {'define': list(), 'content': list()}

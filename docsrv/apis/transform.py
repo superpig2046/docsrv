@@ -1,7 +1,6 @@
 # coding=utf-8
 
 from flask import Blueprint,render_template,request,session,redirect,current_app,g,jsonify, Response
-from werkzeug import secure_filename
 import datetime,json,time
 from ..utils import ViewDecorate
 from ..ext import mongo
